@@ -1,0 +1,11 @@
+{
+  "name": "impactlog-monorepo",
+  "version": "1.0.0",
+"scripts": {
+  "dev": "concurrently --kill-others-on-fail --names \"FRONTEND,GATEWAY,USER,CHAT,ENGAGEMENT,EVENT,REGISTRATION,REWARDS,USER-POST,VERIFICATION\" --prefix-colors \"cyan,white,green,yellow,blue,magenta,red,greenBright,yellowBright,blueBright\" --log \"combined.log\" --timestamp \"[HH:MM:SS]\" \"npm run dev --prefix Frontend/my-app\" \"npm run dev --prefix APIGateway\" \"npm run dev --prefix Backend/user-service\" \"npm run dev --prefix Backend/chat-service\" \"npm run dev --prefix Backend/engagement-service\" \"npm run dev --prefix Backend/event-service\" \"npm run dev --prefix Backend/registrationAndAttendenceService\" \"npm run dev --prefix Backend/rewards-badges-service\" \"npm run dev --prefix Backend/user-post-service\" \"npm run dev --prefix Backend/verificationService\""
+}
+,
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
